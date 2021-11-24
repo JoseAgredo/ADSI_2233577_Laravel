@@ -24,6 +24,15 @@
                             <button type="button" class="btn btn-outline-dark btn-sm">Editar</button>
                         </a>
                     </td>
+                    <td>
+                        <form method="POST" action="{{route('students.destroy', $student)}}">
+                        @method('DELETE')
+                        @csrf
+                        <button type="submit" class="btn btn-outline-danger btn-sm">
+                            Eliminar
+                        </button>
+                        </form>
+                    </td>
                 </tr>
             @endforeach
 
